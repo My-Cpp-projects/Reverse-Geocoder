@@ -67,17 +67,13 @@ void ApplicationController::run()
 void ApplicationController::getDataFromUser()
 {
 	std::cout << "Enter your mapquest.com key" << std::endl;
-	//std::getline(std::cin, m_data->m_key);
+	std::getline(std::cin, m_data->m_key);
 
 	std::cout << "Enter path to the file, where the coordinates are located (Example: D:/User files/aaa.txt)" << std::endl;
-	//std::getline(std::cin, m_data->m_pathToCoordinatesFile);
+	std::getline(std::cin, m_data->m_pathToCoordinatesFile);
 
 	std::cout << "Enter path to the output file, where results will be stored (NOTE: the new data will be appended)" << std::endl;
-	//std::getline(std::cin, m_data->m_pathToOutputFile);
-
-	m_data->m_key = "MVcIFxUDslEOM69nnpe1JX50JhlXIYH6";
-	m_data->m_pathToCoordinatesFile = "D:/Gor/Projects/Projects C++/Visual Studio/ReverseGeocoder/testDataInput.txt";
-	m_data->m_pathToOutputFile = "D:/Gor/Projects/Projects C++/Visual Studio/ReverseGeocoder/testDataOutput.txt";
+	std::getline(std::cin, m_data->m_pathToOutputFile);
 }
 
 void ApplicationController::readLineIntoEntry(const std::string& currentLine, CoordinateEntry& entry)
